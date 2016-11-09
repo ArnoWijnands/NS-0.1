@@ -7,12 +7,15 @@ from tkinter import messagebox
 
 xml_file = 'reisinfo.xml'  #variable aanmaken met het pad naar xml bestand
 #defineren van de NS API authenticatie gegevens(gebruikersnaam en key)
-api_pass = ('brahim.asdaou@student.hu.nl', 'KNZYQ_8TBr24vRmUm7UYUDDx_hz0ybxtAks_2_t5V1_eZvzwSM_RyQ')
+api_pass = requests.get('https://webservices.ns.nl/ns-api-avt?station', auth=('brahim.asdaou@student.hu.nl', 'KNZYQ_8TBr24vRmUm7UYUDDx_hz0ybxtAks_2_t5V1_eZvzwSM_RyQ'))
 
-def read_xml():  # functie read_xml defineren
-
-def write_xml(reply, file):  # functie write_xml defineren
-  bestand = open(file, 'w')  # bestand openen
+def read_xml():
+    xml_lezen = open('reisinfo.xml', 'r') # functie read_xml defineren
+    xml_lezen.read()
+    xml_lezen.close()
+    
+def write_xml(reply, xml_file):  # functie write_xml defineren
+  bestand = open(xml_file, 'w')  # bestand openen
   bestand.write(str(reply))  # bestand schrijven
   bestand.close()  # bestand afsluiten
   
