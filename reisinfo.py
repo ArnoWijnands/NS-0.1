@@ -31,6 +31,12 @@ def request_xml(http, key):
       
 # def station items
 # def station info
+
+def start_init():
+    root.wm_title("Welkom bij NS")
+    #  Tekstlabel weergeven
+    startlabel = Label(root, text="Welkom bij NS", background="#ffc917", foreground="#003082", font=("Arial", 48), anchor=CENTER)
+    startlabel.place(relx=.5, rely=.15, anchor="center")
   
 def info_init():
     root.wm_title("NS Reisinformatie")
