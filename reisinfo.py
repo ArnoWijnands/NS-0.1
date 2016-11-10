@@ -1,16 +1,16 @@
-import requests
+import requests # om informatie van internet te kunnen halen
 import logging
-import xmltodict
+import xmltodict # om XML bestanden te kunnen gebruiken
 from datetime import datetime, timedelta
-from tkinter import *
+from tkinter import * # voor de opmaak
 from tkinter import messagebox
 
 xml_file = 'reisinfo.xml'
-api_key = ('brahim.asdaou@student.hu.nl', 'KNZYQ_8TBr24vRmUm7UYUDDx_hz0ybxtAks_2_t5V1_eZvzwSM_RyQ')
+api_key = ('brahim.asdaou@student.hu.nl', 'KNZYQ_8TBr24vRmUm7UYUDDx_hz0ybxtAks_2_t5V1_eZvzwSM_RyQ') #inlog gegevens voor de NS API
 root = Tk()
-root.configure(background="#ffc917")
-root.attributes('-fullscreen', True)
-root.iconbitmap(r'ns.ico')
+root.configure(background="#ffc917") # achtergrond
+root.attributes('-fullscreen', True) # volledig scherm staat aan
+root.iconbitmap(r'ns.ico') # Plaatje van het NS logo
 def esc(event):
         sys.exit()
 root.bind('<Escape>', esc)
